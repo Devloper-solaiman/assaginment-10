@@ -12,7 +12,7 @@ const Navbar = () => {
 
     const menuList = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>about</Link></li>
+        <li><Link to='/aboutPage'>about</Link></li>
         <li><Link to='/'>Service</Link></li>
         <li><Link to='/chakout'>Chakout</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>

@@ -7,6 +7,9 @@ import Login from './Page/Login/Login';
 import Blogs from './Page/Blogs/Blogs';
 import Signup from './Page/Login/Signup';
 import RequireAuth from './Page/Login/RequireAuth';
+import PageNotFound from './Page/Shared/PageNotFound';
+import AboutPage from './Page/AboutPage/AboutPage';
+
 
 function App() {
   return (
@@ -14,10 +17,12 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/aboutPage' element={<AboutPage></AboutPage>}></Route>
         <Route path='/chakout' element={<RequireAuth><Chakout></Chakout></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </div>
   );
