@@ -13,10 +13,10 @@ const Navbar = () => {
     const menuList = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/aboutPage'>about</Link></li>
-        <li><Link to='/'>Service</Link></li>
+        <li><Link to='/service'>Service</Link></li>
         <li><Link to='/chakout'>Chakout</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
-        <li><Link to='/'>Contact US</Link></li>
+        <li><Link to='/contact'>Contact US</Link></li>
         {
             user ? <li><Link onClick={logout}  >Sign Out</Link></li> : <li><Link to='/login'>Sign</Link></li>
         }

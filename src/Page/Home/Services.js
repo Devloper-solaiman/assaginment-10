@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardData from './CardData';
-// https://jsonplaceholder.typicode.com/photos
+
 const Services = () => {
     const [data, setData] = useState([])
     useEffect(() => {

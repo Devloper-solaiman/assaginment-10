@@ -11,6 +11,8 @@ import PageNotFound from './Page/Shared/PageNotFound';
 import AboutPage from './Page/AboutPage/AboutPage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Service from './Page/Service/Service';
+import Contact from './Page/Contact/Contact';
 
 
 
@@ -25,6 +27,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/service' element={<Service></Service>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>
