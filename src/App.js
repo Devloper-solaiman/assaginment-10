@@ -9,6 +9,9 @@ import Signup from './Page/Login/Signup';
 import RequireAuth from './Page/Login/RequireAuth';
 import PageNotFound from './Page/Shared/PageNotFound';
 import AboutPage from './Page/AboutPage/AboutPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -24,6 +27,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

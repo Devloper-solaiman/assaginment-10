@@ -14,7 +14,7 @@ const Services = () => {
                 <h1 className='text-primary text-2xl font-bold text-center uppercase'>our serveces</h1>
                 <h1 className='text-black/80 text-5xl font-bold text-center uppercase'>Browse Our Online Courses</h1>
             </div>
-            <div className='grid grid-cols-4 gap-2'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-2'>
                 {
                     data.map(datas => <CardData
                         key={datas.id}
