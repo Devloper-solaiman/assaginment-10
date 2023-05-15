@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../Shared/Loading';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Signup = () => {
 
@@ -32,11 +33,16 @@ const Signup = () => {
     if (user || googleUser) {
         navigate('/chakout');
     }
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                console.log('email verication send');
+            })
+    }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
-
-        console.log('update done');
+        await verifyEmail()
     }
     return (
         <div>
